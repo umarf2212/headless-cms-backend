@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 
 exports.createDirectory = async (req, res) => {
   const targetDirectoryId = req.params.targetDirectoryId;
-  const newDirectoryName = req.params.newDirectoryName;
+  const newDirectoryName = decodeURIComponent(req.params.newDirectoryName);
 
   try {
     // Find the target directory by its ID

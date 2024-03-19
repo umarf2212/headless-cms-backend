@@ -1,11 +1,22 @@
 const express = require("express");
 const app = express();
 const PORT = 8000; // You can change the port if needed
+const cors = require("cors");
 
 const createFileStructure = require("./utils/CreateFileStructure");
 
 const directoryRoutes = require("./routes/directoryRoutes");
 const fileRoutes = require("./routes/fileRoutes");
+
+const bodyParser = require("body-parser");
+
+// Middleware to parse JSON bodies
+app.use(express.json());
+
+// Middleware to parse URL-encoded form bodies
+app.use(bodyParser.urlencoded({ extended: true }));
+
+app.use(cors());
 
 // Dummy Test Route
 app.get("/", (req, res) => {

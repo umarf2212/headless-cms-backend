@@ -4,11 +4,12 @@ const connectDatabase = require("../db_connection/db_connect");
 const Directory = require("../models/DirectorySchema");
 const File = require("../models/FileSchema");
 
-exports.addNewFile = async (req, res) => {
+exports.addNewFileController = async (req, res) => {
   const directoryId = req.params.directoryId;
-  // const { name, url } = req.body; // Assuming name and url of the file are passed in the request body
-  const name = `someFile_${Math.floor(Math.random() * 1000)}.txt`;
-  const url = "https://google.com/";
+
+  const { name, url } = req.body; // Assuming name and url of the file are passed in the request body
+  // const name = `someFile_${Math.floor(Math.random() * 1000)}.txt`;
+  // const url = "https://google.com/";
 
   try {
     await connectDatabase();

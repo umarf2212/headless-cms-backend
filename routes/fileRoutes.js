@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
-const { addNewFile } = require("../controllers/addNewFileController");
+const { addNewFileController } = require("../controllers/addNewFileController");
 
-router.get("/new/:directoryId", addNewFile);
+router.post("/new/:directoryId", addNewFileController);
 
 module.exports = router;
