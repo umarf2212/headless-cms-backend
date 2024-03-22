@@ -1,3 +1,1 @@
-atlas db: 
-username: prologic313
-pass: yxmQS1QDXeVp3gga
+## NodeJS based backend for the Headless CMS
