@@ -4,7 +4,8 @@
   "description": "Headless CMS powered by MERN stack",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./src/test_server.js"
   },
   "author": "",
   "license": "ISC",
